@@ -1,0 +1,7 @@
+# 换行符规范
+# 文本文件入库时统一为 LF；检出时由 git 按平台处理
+* text=auto
+
+# bash 脚本在任何平台（含 Windows）检出时都保持 LF，
+# 避免上传到 Linux 服务器后因 CRLF 报 \r 错误
+*.sh text eol=lf
